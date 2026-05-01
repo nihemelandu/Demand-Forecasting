@@ -1,0 +1,41 @@
+# M5 Probabilistic Forecasting Configuration
+
+# Data paths
+data:
+  sales_path: "data/sales_train_validation.csv"
+  calendar_path: "data/calendar.csv"
+  prices_path: "data/sell_prices.csv"
+
+# Forecasting parameters
+forecast:
+  horizon: 28  # days ahead
+  quantiles: [0.005, 0.025, 0.165, 0.250, 0.500, 0.750, 0.835, 0.975, 0.995]
+
+# Models to run
+models:
+  baseline:
+    - Naive
+    - sNaive
+    - SES
+  statistical:
+    - ETS
+    - ARIMA
+    - Kernel
+  ml:
+    - RF_local
+  
+# Computational settings
+compute:
+  n_workers: 8  # parallel workers
+  random_seed: 42
+
+# Output paths
+output:
+  forecasts: "results/forecasts"
+  metrics: "results/metrics"
+  logs: "logs"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

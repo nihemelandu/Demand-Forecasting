@@ -1,0 +1,20 @@
+2026-04-30 18:27:17,685 - src.utils - INFO - Logging initialized. Log file: logs\run_20260430_182717.log
+2026-04-30 18:27:17,685 - __main__ - INFO - Starting M5 Data Validation
+2026-04-30 18:27:17,687 - __main__ - INFO - Data directory: data
+2026-04-30 18:27:17,687 - __main__ - INFO - ============================================================
+2026-04-30 18:27:17,687 - __main__ - INFO - STEP 1 — File Integrity Checks
+2026-04-30 18:27:17,687 - __main__ - INFO - ============================================================
+2026-04-30 18:27:21,559 - __main__ - INFO - [INFO] sales_shape: Sales file loaded: 30,490 rows x 1,918 columns
+2026-04-30 18:27:21,559 - __main__ - INFO - [INFO] sales_row_count: Row count correct: 30,490
+2026-04-30 18:27:21,559 - __main__ - ERROR - [CRITICAL] sales_day_cols: Expected 1941 day columns, got 1912
+2026-04-30 18:27:21,567 - __main__ - ERROR - [CRITICAL] sales_id_cols: Expected id column missing: id
+2026-04-30 18:27:21,588 - __main__ - INFO - [INFO] calendar_shape: Calendar file loaded: 1,969 rows x 13 columns
+2026-04-30 18:27:21,588 - __main__ - INFO - [INFO] calendar_row_count: Row count correct: 1,969
+2026-04-30 18:27:24,673 - __main__ - INFO - [INFO] prices_shape: Prices file loaded: 6,841,121 rows x 4 columns
+2026-04-30 18:27:24,698 - __main__ - INFO - ============================================================
+2026-04-30 18:27:24,698 - __main__ - INFO - VALIDATION SUMMARY
+2026-04-30 18:27:24,698 - __main__ - INFO - ============================================================
+2026-04-30 18:27:24,706 - __main__ - INFO - CRITICAL: 2 findings
+2026-04-30 18:27:24,706 - __main__ - INFO - WARNING: 0 findings
+2026-04-30 18:27:24,706 - __main__ - INFO - INFO: 5 findings
+2026-04-30 18:27:24,706 - __main__ - ERROR - CRITICAL findings must be resolved before Iteration 3.

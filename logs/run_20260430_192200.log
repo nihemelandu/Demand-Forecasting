@@ -1,0 +1,86 @@
+2026-04-30 19:22:00,494 - src.utils - INFO - Logging initialized. Log file: logs\run_20260430_192200.log
+2026-04-30 19:22:00,494 - __main__ - INFO - Starting M5 Data Validation
+2026-04-30 19:22:00,494 - __main__ - INFO - Data directory: data
+2026-04-30 19:22:00,494 - __main__ - INFO - ============================================================
+2026-04-30 19:22:00,494 - __main__ - INFO - STEP 1 — File Integrity Checks
+2026-04-30 19:22:00,494 - __main__ - INFO - ============================================================
+2026-04-30 19:22:02,352 - __main__ - INFO - [INFO] sales_shape: Sales file loaded: 30,490 rows x 1,918 columns
+2026-04-30 19:22:02,368 - __main__ - INFO - [INFO] sales_row_count: Row count correct: 30,490
+2026-04-30 19:22:02,368 - __main__ - INFO - [INFO] sales_day_cols: Day column count correct: 1913
+2026-04-30 19:22:02,368 - __main__ - INFO - [INFO] calendar_shape: Calendar file loaded: 1,969 rows x 13 columns
+2026-04-30 19:22:02,368 - __main__ - INFO - [INFO] calendar_row_count: Row count correct: 1,969
+2026-04-30 19:22:03,878 - __main__ - INFO - [INFO] prices_shape: Prices file loaded: 6,841,121 rows x 4 columns
+2026-04-30 19:22:03,878 - __main__ - INFO - ============================================================
+2026-04-30 19:22:03,878 - __main__ - INFO - STEP 2 — Schema Validation
+2026-04-30 19:22:03,878 - __main__ - INFO - ============================================================
+2026-04-30 19:22:03,878 - __main__ - INFO - --- Sales schema ---
+2026-04-30 19:22:03,881 - __main__ - INFO - [INFO] sales_null_item_id: No nulls in 'item_id'
+2026-04-30 19:22:03,883 - __main__ - INFO - [INFO] sales_null_dept_id: No nulls in 'dept_id'
+2026-04-30 19:22:03,883 - __main__ - INFO - [INFO] sales_null_cat_id: No nulls in 'cat_id'
+2026-04-30 19:22:03,885 - __main__ - INFO - [INFO] sales_null_store_id: No nulls in 'store_id'
+2026-04-30 19:22:03,885 - __main__ - INFO - [INFO] sales_null_state_id: No nulls in 'state_id'
+2026-04-30 19:22:04,045 - __main__ - INFO - [INFO] sales_null_days: No null values in any day column
+2026-04-30 19:22:04,078 - __main__ - INFO - [INFO] sales_dtype_days: All day columns are numeric
+2026-04-30 19:22:04,378 - __main__ - INFO - [INFO] sales_demand_range: Demand range: [0, 763] — all non-negative
+2026-04-30 19:22:05,142 - __main__ - INFO - [INFO] sales_integer_check: All demand values are integer-valued
+2026-04-30 19:22:05,428 - __main__ - INFO - [INFO] sales_zero_prevalence: Zero demand prevalence: 68.2% of all (39,777,094 of 58,327,370 cells)
+2026-04-30 19:22:05,428 - __main__ - INFO - [INFO] sales_cardinality_state_id: 'state_id': 3 unique values — correct
+2026-04-30 19:22:05,443 - __main__ - INFO - [INFO] sales_cardinality_store_id: 'store_id': 10 unique values — correct
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] sales_cardinality_cat_id: 'cat_id': 3 unique values — correct
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] sales_cardinality_dept_id: 'dept_id': 7 unique values — correct
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] sales_cardinality_item_id: 'item_id': 3049 unique values — correct
+2026-04-30 19:22:05,444 - __main__ - INFO - --- Calendar schema ---
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_date_parse: Date column parsed successfully
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_start_date: Start date correct: 2011-01-29
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_end_date: End date: 2016-06-19
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_duplicate_dates: No duplicate dates
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_snap_CA_range: snap_CA: all values are 0 or 1
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_snap_TX_range: snap_TX: all values are 0 or 1
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_snap_WI_range: snap_WI: all values are 0 or 1
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_null_event_name_1: 'event_name_1': 1,807 nulls of 1,969 rows (91.8%) — expected, most days have no event
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_null_event_type_1: 'event_type_1': 1,807 nulls of 1,969 rows (91.8%) — expected, most days have no event
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_null_event_name_2: 'event_name_2': 1,964 nulls of 1,969 rows (99.7%) — expected, most days have no event
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_null_event_type_2: 'event_type_2': 1,964 nulls of 1,969 rows (99.7%) — expected, most days have no event
+2026-04-30 19:22:05,444 - __main__ - INFO - [INFO] calendar_null_wm_yr_wk: No nulls in wm_yr_wk
+2026-04-30 19:22:05,444 - __main__ - INFO - --- Prices schema ---
+2026-04-30 19:22:05,594 - __main__ - INFO - [INFO] prices_null_store_id: No nulls in 'store_id'
+2026-04-30 19:22:05,728 - __main__ - INFO - [INFO] prices_null_item_id: No nulls in 'item_id'
+2026-04-30 19:22:05,728 - __main__ - INFO - [INFO] prices_null_wm_yr_wk: No nulls in 'wm_yr_wk'
+2026-04-30 19:22:05,745 - __main__ - INFO - [INFO] prices_null_sell_price: Null sell_price: 0 rows (0.00%) — expected where item not stocked
+2026-04-30 19:22:05,811 - __main__ - INFO - [INFO] prices_positive: All non-null prices are positive. Range: [0.01, 107.32]
+2026-04-30 19:22:05,811 - __main__ - INFO - [INFO] prices_dtype: sell_price is numeric
+2026-04-30 19:22:06,094 - __main__ - INFO - [INFO] prices_cardinality: Prices cover 10 stores and 3,049 items
+2026-04-30 19:22:06,094 - __main__ - INFO - ============================================================
+2026-04-30 19:22:06,094 - __main__ - INFO - STEP 3 — Hierarchical Consistency Verification
+2026-04-30 19:22:06,094 - __main__ - INFO - ============================================================
+2026-04-30 19:22:06,112 - __main__ - INFO - [INFO] hierarchy_level12_count: Level 12 series count correct: 30,490
+2026-04-30 19:22:06,428 - __main__ - INFO - [INFO] hierarchy_level2_states: Level 2: 3 states found — correct
+2026-04-30 19:22:06,478 - __main__ - INFO - [INFO] hierarchy_level2_CA: State CA: 4 stores, 3,049 items, 12,196 series
+2026-04-30 19:22:06,529 - __main__ - INFO - [INFO] hierarchy_level2_TX: State TX: 3 stores, 3,049 items, 9,147 series
+2026-04-30 19:22:06,562 - __main__ - INFO - [INFO] hierarchy_level2_WI: State WI: 3 stores, 3,049 items, 9,147 series
+2026-04-30 19:22:06,878 - __main__ - INFO - [INFO] hierarchy_level3_stores: Level 3: 10 stores found — correct
+2026-04-30 19:22:06,895 - __main__ - INFO - [INFO] hierarchy_items_per_store: All 10 stores have exactly 3,049 items — correct
+2026-04-30 19:22:07,207 - __main__ - INFO - [INFO] hierarchy_level4_cats: Level 4: 3 categories found — correct
+2026-04-30 19:22:07,272 - __main__ - INFO - [INFO] hierarchy_level4_FOODS: Category FOODS: 14,370 store-item series
+2026-04-30 19:22:07,304 - __main__ - INFO - [INFO] hierarchy_level4_HOBBIES: Category HOBBIES: 5,650 store-item series
+2026-04-30 19:22:07,336 - __main__ - INFO - [INFO] hierarchy_level4_HOUSEHOLD: Category HOUSEHOLD: 10,470 store-item series
+2026-04-30 19:22:07,662 - __main__ - INFO - [INFO] hierarchy_level5_depts: Level 5: 7 departments found — correct
+2026-04-30 19:22:07,678 - __main__ - INFO - [INFO] hierarchy_level5_FOODS_1: Department FOODS_1: 2,160 store-item series
+2026-04-30 19:22:07,695 - __main__ - INFO - [INFO] hierarchy_level5_FOODS_2: Department FOODS_2: 3,980 store-item series
+2026-04-30 19:22:07,745 - __main__ - INFO - [INFO] hierarchy_level5_FOODS_3: Department FOODS_3: 8,230 store-item series
+2026-04-30 19:22:07,762 - __main__ - INFO - [INFO] hierarchy_level5_HOBBIES_1: Department HOBBIES_1: 4,160 store-item series
+2026-04-30 19:22:07,779 - __main__ - INFO - [INFO] hierarchy_level5_HOBBIES_2: Department HOBBIES_2: 1,490 store-item series
+2026-04-30 19:22:07,811 - __main__ - INFO - [INFO] hierarchy_level5_HOUSEHOLD_1: Department HOUSEHOLD_1: 5,320 store-item series
+2026-04-30 19:22:07,829 - __main__ - INFO - [INFO] hierarchy_level5_HOUSEHOLD_2: Department HOUSEHOLD_2: 5,150 store-item series
+2026-04-30 19:22:07,829 - __main__ - INFO - Cross-checking aggregate totals
+2026-04-30 19:22:07,978 - __main__ - INFO - [INFO] hierarchy_grand_total: Grand total units sold: 65,695,409
+2026-04-30 19:22:07,978 - __main__ - INFO - [INFO] hierarchy_grand_total_match: State aggregation total matches grand total — discrepancy: 0.00e+00
+2026-04-30 19:22:07,978 - __main__ - INFO - [INFO] hierarchy_grand_total_match: Store aggregation total matches grand total — discrepancy: 0.00e+00
+2026-04-30 19:22:07,978 - __main__ - INFO - [INFO] hierarchy_grand_total_match: Category aggregation total matches grand total — discrepancy: 0.00e+00
+2026-04-30 19:22:07,978 - __main__ - INFO - [INFO] hierarchy_grand_total_match: Department aggregation total matches grand total — discrepancy: 0.00e+00
+2026-04-30 19:22:07,978 - __main__ - INFO - ============================================================
+2026-04-30 19:22:07,978 - __main__ - INFO - VALIDATION SUMMARY
+2026-04-30 19:22:07,978 - __main__ - INFO - ============================================================
+2026-04-30 19:22:07,993 - __main__ - INFO - CRITICAL: 0 findings
+2026-04-30 19:22:07,993 - __main__ - INFO - WARNING: 0 findings
+2026-04-30 19:22:07,994 - __main__ - INFO - INFO: 64 findings

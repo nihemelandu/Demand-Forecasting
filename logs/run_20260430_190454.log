@@ -1,0 +1,58 @@
+2026-04-30 19:04:54,431 - src.utils - INFO - Logging initialized. Log file: logs\run_20260430_190454.log
+2026-04-30 19:04:54,431 - __main__ - INFO - Starting M5 Data Validation
+2026-04-30 19:04:54,431 - __main__ - INFO - Data directory: data
+2026-04-30 19:04:54,431 - __main__ - INFO - ============================================================
+2026-04-30 19:04:54,431 - __main__ - INFO - STEP 1 — File Integrity Checks
+2026-04-30 19:04:54,431 - __main__ - INFO - ============================================================
+2026-04-30 19:04:56,553 - __main__ - INFO - [INFO] sales_shape: Sales file loaded: 30,490 rows x 1,918 columns
+2026-04-30 19:04:56,553 - __main__ - INFO - [INFO] sales_row_count: Row count correct: 30,490
+2026-04-30 19:04:56,553 - __main__ - INFO - [INFO] sales_day_cols: Day column count correct: 1913
+2026-04-30 19:04:56,569 - __main__ - INFO - [INFO] calendar_shape: Calendar file loaded: 1,969 rows x 13 columns
+2026-04-30 19:04:56,569 - __main__ - INFO - [INFO] calendar_row_count: Row count correct: 1,969
+2026-04-30 19:04:58,257 - __main__ - INFO - [INFO] prices_shape: Prices file loaded: 6,841,121 rows x 4 columns
+2026-04-30 19:04:58,257 - __main__ - INFO - ============================================================
+2026-04-30 19:04:58,257 - __main__ - INFO - STEP 2 — Schema Validation
+2026-04-30 19:04:58,257 - __main__ - INFO - ============================================================
+2026-04-30 19:04:58,257 - __main__ - INFO - --- Sales schema ---
+2026-04-30 19:04:58,257 - __main__ - INFO - [INFO] sales_null_item_id: No nulls in 'item_id'
+2026-04-30 19:04:58,257 - __main__ - INFO - [INFO] sales_null_dept_id: No nulls in 'dept_id'
+2026-04-30 19:04:58,257 - __main__ - INFO - [INFO] sales_null_cat_id: No nulls in 'cat_id'
+2026-04-30 19:04:58,257 - __main__ - INFO - [INFO] sales_null_store_id: No nulls in 'store_id'
+2026-04-30 19:04:58,273 - __main__ - INFO - [INFO] sales_null_state_id: No nulls in 'state_id'
+2026-04-30 19:04:58,485 - __main__ - INFO - [INFO] sales_null_days: No null values in any day column
+2026-04-30 19:04:58,518 - __main__ - INFO - [INFO] sales_dtype_days: All day columns are numeric
+2026-04-30 19:04:58,975 - __main__ - INFO - [INFO] sales_demand_range: Demand range: [0, 763] — all non-negative
+2026-04-30 19:04:59,858 - __main__ - INFO - [INFO] sales_integer_check: All demand values are integer-valued
+2026-04-30 19:05:00,231 - __main__ - INFO - [INFO] sales_zero_prevalence: Zero demand prevalence: 68.2% of all (39,777,094 of 58,327,370 cells)
+2026-04-30 19:05:00,233 - __main__ - INFO - [INFO] sales_cardinality_state_id: 'state_id': 3 unique values — correct
+2026-04-30 19:05:00,233 - __main__ - INFO - [INFO] sales_cardinality_store_id: 'store_id': 10 unique values — correct
+2026-04-30 19:05:00,233 - __main__ - INFO - [INFO] sales_cardinality_cat_id: 'cat_id': 3 unique values — correct
+2026-04-30 19:05:00,241 - __main__ - INFO - [INFO] sales_cardinality_dept_id: 'dept_id': 7 unique values — correct
+2026-04-30 19:05:00,241 - __main__ - INFO - [INFO] sales_cardinality_item_id: 'item_id': 3049 unique values — correct
+2026-04-30 19:05:00,241 - __main__ - INFO - --- Calendar schema ---
+2026-04-30 19:05:00,252 - __main__ - INFO - [INFO] calendar_date_parse: Date column parsed successfully
+2026-04-30 19:05:00,252 - __main__ - INFO - [INFO] calendar_start_date: Start date correct: 2011-01-29
+2026-04-30 19:05:00,252 - __main__ - INFO - [INFO] calendar_end_date: End date: 2016-06-19
+2026-04-30 19:05:00,252 - __main__ - INFO - [INFO] calendar_duplicate_dates: No duplicate dates
+2026-04-30 19:05:00,257 - __main__ - INFO - [INFO] calendar_snap_CA_range: snap_CA: all values are 0 or 1
+2026-04-30 19:05:00,258 - __main__ - INFO - [INFO] calendar_snap_TX_range: snap_TX: all values are 0 or 1
+2026-04-30 19:05:00,258 - __main__ - INFO - [INFO] calendar_snap_WI_range: snap_WI: all values are 0 or 1
+2026-04-30 19:05:00,258 - __main__ - INFO - [INFO] calendar_null_event_name_1: 'event_name_1': 1,807 nulls of 1,969 rows (91.8%) — expected, most days have no event
+2026-04-30 19:05:00,260 - __main__ - INFO - [INFO] calendar_null_event_type_1: 'event_type_1': 1,807 nulls of 1,969 rows (91.8%) — expected, most days have no event
+2026-04-30 19:05:00,260 - __main__ - INFO - [INFO] calendar_null_event_name_2: 'event_name_2': 1,964 nulls of 1,969 rows (99.7%) — expected, most days have no event
+2026-04-30 19:05:00,260 - __main__ - INFO - [INFO] calendar_null_event_type_2: 'event_type_2': 1,964 nulls of 1,969 rows (99.7%) — expected, most days have no event
+2026-04-30 19:05:00,262 - __main__ - INFO - [INFO] calendar_null_wm_yr_wk: No nulls in wm_yr_wk
+2026-04-30 19:05:00,262 - __main__ - INFO - --- Prices schema ---
+2026-04-30 19:05:00,411 - __main__ - INFO - [INFO] prices_null_store_id: No nulls in 'store_id'
+2026-04-30 19:05:00,565 - __main__ - INFO - [INFO] prices_null_item_id: No nulls in 'item_id'
+2026-04-30 19:05:00,565 - __main__ - INFO - [INFO] prices_null_wm_yr_wk: No nulls in 'wm_yr_wk'
+2026-04-30 19:05:00,586 - __main__ - INFO - [INFO] prices_null_sell_price: Null sell_price: 0 rows (0.00%) — expected where item not stocked
+2026-04-30 19:05:00,664 - __main__ - INFO - [INFO] prices_positive: All non-null prices are positive. Range: [0.01, 107.32]
+2026-04-30 19:05:00,664 - __main__ - INFO - [INFO] prices_dtype: sell_price is numeric
+2026-04-30 19:05:00,964 - __main__ - INFO - [INFO] prices_cardinality: Prices cover 10 stores and 3,049 items
+2026-04-30 19:05:00,964 - __main__ - INFO - ============================================================
+2026-04-30 19:05:00,964 - __main__ - INFO - VALIDATION SUMMARY
+2026-04-30 19:05:00,964 - __main__ - INFO - ============================================================
+2026-04-30 19:05:00,964 - __main__ - INFO - CRITICAL: 0 findings
+2026-04-30 19:05:00,964 - __main__ - INFO - WARNING: 0 findings
+2026-04-30 19:05:00,964 - __main__ - INFO - INFO: 40 findings
